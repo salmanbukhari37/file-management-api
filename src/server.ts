@@ -29,7 +29,7 @@ app.get("/ping", (req, res) => {
 connectDB()
   .then(() => {
     // Start the server only after a successful database connection
-    const PORT = process.env.PORT || 3000;
+    const PORT = process.env.PORT || 5000;
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });

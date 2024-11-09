@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: file-management-api
+    env: node
+    buildCommand: "yarn install && yarn build"
+    startCommand: "yarn start"
+    envVars:
+      - key: JWT_SECRET
+        value: 4dc29c2ae3aaf3fa4e8452e7d7b9a8704ac65798bc7b91e1d8852f3a7a120ed9e2585f6d4af64de9e0c9ff4a6e914830
+      - key: MONGO_URI
+        value: mongodb+srv://salman:FOuTRNbS0qaG4E6J@cluster0.tgaemsw.mongodb.net/file_management
+      - key: PORT
+        value: 5000
