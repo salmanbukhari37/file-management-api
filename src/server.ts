@@ -17,10 +17,6 @@ app.use(cors);
 // Serve files from the 'uploads' folder at the '/uploads' URL path
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
-// Confirm the path being used for static files
-const uploadsPath = path.join(__dirname, "uploads");
-console.log("Serving static files from:", uploadsPath);
-
 app.use("/auth", authRoutes);
 app.use("/api/files", authenticateToken, fileRoutes);
 app.use("/api/share", shareRoutes);
